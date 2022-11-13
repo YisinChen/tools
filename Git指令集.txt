@@ -1,0 +1,119 @@
+
+Git 指令
+============================
+git [sub command] --help  -->查看指令help
+
+<Git Config>
+系統設定檔:   參數: --system  --> /etc/gitconfig or C:\Program Files\Git\mingw64\etc\gitconfig
+使用者設定檔: 參數: --global  --> ~/.gitconfig or %USERPROFILE%/.gitconfig
+本地庫設定檔: 參數: --local   --> .git/config (預設為 --local)
+設定檔優先順序: system < global < local
+git config [--global] core.autocrlf true  --> push 時使用 LF , pull 時使用 CRLF (Git Windows)
+git config [--global] --list  -->列出config內容
+git config [--global] user.name "YisinChen"  
+git config [--global] user.email "yisinchen@gpmcorp.com.tw"
+git config [--global] core.editor vim   --> 預設文字編輯器
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"  -->Windows改成Notepad++
+git config [--global] merge.tool vimdiff  -->merger tool
+
+git config --global alias.st status  -->git status指令 alias 為 git st
+git config --global alias.ph 'push -u origin master'
+git config --global --unset [config name]  --> 清除config 設定 , ex: git config --global --unset alias.ph
+
+[SSH Key]
+ssh-keygen -o -t rsa -b 4096 -C "email@example.com"  -->Generate a new RSA SSH key pair 放在 ~/.ssh/id_rsa.pub (public key)
+
+
+<建立Repository>
+
+http url : http://IT-GitLab.gpmcorp.com.tw/test/ad_tools.git
+SSH  url : git@IT-GitLab.gpmcorp.com.tw:test/ad_tools.git  
+
+<git server clone 下來>
+git clone [url]
+
+
+<已存在目錄, 新建git Repository>
+git init
+git remote add origin [url]
+git add .
+git commit -m "Initial Commit"
+git push -u origin master
+
+
+<remote>
+git remote [-v]  --> 查詢remote設定
+git remote add [remote name] [url]  --> 新增remote 位址
+
+
+<查詢>
+git status  -->查看工作目錄中的檔案變更狀態
+git show    -->查看Commit的詳細內容
+git log     -->查看history
+git log --graph  -->log 圖形化(??)
+git log --all  --> 完整資訊
+
+
+
+<stage / unstage>
+git add .  -->stage all
+git add <file> ...  --> stage&track new/modified files
+git add -f <file>...  --> 將 .gitignore 裡的檔案強制加進 stage
+git rm <file> ...  --> stage delete files & Working file
+git rm --cached <file> ...  --> untrack files (Working file還在)
+git rm -r --cached <foldername> --> untrack folder
+git mv <old file> <new file>  -->file rename (等於 git add <new file> , git rm <old file>)
+
+git reset HEAD <file>..." to unstage
+
+
+
+
+<commit>
+git commit -->標準Commit, 跳出text editor
+git commit -m "Commit Message" -->直接輸入Commit Message而不再跳出text editor
+git commit -v  -->將詳細修改內容顯示在text editor中
+git commit -[a | all] commit automatically all stage files that modified/deleted. (但不包含new file)
+git commit --amend --> 跳出文件編輯器修改最後一次 commit 訊息 (-m "message" 可直接輸入不開文件編輯器)
+
+
+<push>
+git push -u origin master -->標準push , git push -u <remote name> <remote branch>
+git push -u --force origin master -->強制覆寫remote上的history(git server上的設定要開放)
+
+<branch>
+git branch  -->list branch (local repository)
+git branch -[a | all]  --> list branch (local&remote repository)
+git branch -[r | remote]  --> list remote branches 
+git branch -[d | delete] <branchname> ... -->delete branch
+git branch -[m | move] [<oldbranch>] <newbranch>  -->move/rename branch
+git branch -[c | copy] [<oldbranch>] <newbranch>  -->copy branch
+
+git branch --set-upstream-to=origin/master master -->bind remote branch and local branch
+
+
+<reset>
+reset --mixed HEAD~2 [<file>]  --> 將指定的Commit數量拆放回Working Directory (預設採 Mixed 模式)
+reset --soft  HEAD~2 [<file>]  --> 
+
+比較三種模式的差別
+                     --soft      --mixed        --hard
+Working Directory      不變         不變          丟掉
+Staging Area           不變         丟掉          丟掉
+
+
+<stash>
+git stash [push] --> push to stash (只暫存與 HEAD 差異、不暫存整個檔案內容)
+git stash pop  --> get stash to HEAD  
+
+<checkout>
+git checkout <branch>  --> 切換branch
+git checkout -- <file> ...  --> 取消工作目錄上的檔案變更
+
+
+<rebase> 修改歷史
+git rebase -i HEAD~3 -->修改最後 3 個版本的 commit (未 push) 紀錄
+
+<diff>
+git diff  --> 比對「Working directory」與「Staged Area」, 顯示未預存的修改內容(預存後又修改則顯示與預存檔案的差異)
+git diff --staged  -->比對「Staged Area」與 HEAD , 顯示已預存的修改內容
