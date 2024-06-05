@@ -1,0 +1,19 @@
+修改 /etc/gitlab/gitlab.rb
+
+gitlab_rails['backup_path'] = "/home/it/gitlab_backup"
+
+
+讓 Gitlab 套用新設定
+gitlab-ctl reconfigure
+// 重新啟動 Gitlab
+gitlab-ctl restart
+
+執行備份指令
+gitlab-rake gitlab:backup:create
+
+
+還原專案 bundle
+
+git clone /path/to/your/bundle yourRepo.git
+
+EX: git clone /temp/ad_api.bundle AD_API

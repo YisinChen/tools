@@ -1,0 +1,151 @@
+it@IT-Gitlab:~$ sudo apt-get install vsftpd
+正在讀取套件清單... 完成
+正在重建相依關係
+正在讀取狀態資料... 完成
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.15.0-101 linux-headers-4.15.0-101-generic linux-headers-4.15.0-106
+  linux-headers-4.15.0-106-generic linux-headers-4.15.0-107 linux-headers-4.15.0-107-generic
+  linux-headers-4.15.0-112 linux-headers-4.15.0-112-generic linux-headers-4.15.0-115
+  linux-headers-4.15.0-115-generic linux-headers-4.15.0-117 linux-headers-4.15.0-117-generic
+  linux-headers-4.15.0-118 linux-headers-4.15.0-118-generic linux-headers-4.15.0-120
+  linux-headers-4.15.0-120-generic linux-headers-4.15.0-122 linux-headers-4.15.0-122-generic
+  linux-headers-4.15.0-123 linux-headers-4.15.0-123-generic linux-headers-4.15.0-126
+  linux-headers-4.15.0-126-generic linux-headers-4.15.0-128 linux-headers-4.15.0-128-generic
+  linux-headers-4.15.0-132 linux-headers-4.15.0-132-generic linux-headers-4.15.0-133
+  linux-headers-4.15.0-133-generic linux-headers-4.15.0-136 linux-headers-4.15.0-136-generic
+  linux-headers-4.15.0-137 linux-headers-4.15.0-137-generic linux-headers-4.15.0-139
+  linux-headers-4.15.0-139-generic linux-headers-4.15.0-29 linux-headers-4.15.0-29-generic
+  linux-headers-4.15.0-43 linux-headers-4.15.0-43-generic linux-headers-4.15.0-45
+  linux-headers-4.15.0-45-generic linux-headers-4.15.0-46 linux-headers-4.15.0-46-generic
+  linux-headers-4.15.0-47 linux-headers-4.15.0-47-generic linux-headers-4.15.0-50
+  linux-headers-4.15.0-50-generic linux-headers-4.15.0-51 linux-headers-4.15.0-51-generic
+  linux-headers-4.15.0-52 linux-headers-4.15.0-52-generic linux-headers-4.15.0-54
+  linux-headers-4.15.0-54-generic linux-headers-4.15.0-55 linux-headers-4.15.0-55-generic
+  linux-headers-4.15.0-58 linux-headers-4.15.0-58-generic linux-headers-4.15.0-60
+  linux-headers-4.15.0-60-generic linux-headers-4.15.0-62 linux-headers-4.15.0-62-generic
+  linux-headers-4.15.0-64 linux-headers-4.15.0-64-generic linux-headers-4.15.0-65
+  linux-headers-4.15.0-65-generic linux-headers-4.15.0-66 linux-headers-4.15.0-66-generic
+  linux-headers-4.15.0-69 linux-headers-4.15.0-69-generic linux-headers-4.15.0-70
+  linux-headers-4.15.0-70-generic linux-headers-4.15.0-72 linux-headers-4.15.0-72-generic
+  linux-headers-4.15.0-74 linux-headers-4.15.0-74-generic linux-headers-4.15.0-76
+  linux-headers-4.15.0-76-generic linux-headers-4.15.0-88 linux-headers-4.15.0-88-generic
+  linux-headers-4.15.0-91 linux-headers-4.15.0-91-generic linux-headers-4.15.0-96
+  linux-headers-4.15.0-96-generic linux-headers-4.15.0-99 linux-headers-4.15.0-99-generic
+  linux-image-4.15.0-101-generic linux-image-4.15.0-106-generic linux-image-4.15.0-107-generic
+  linux-image-4.15.0-112-generic linux-image-4.15.0-115-generic linux-image-4.15.0-117-generic
+  linux-image-4.15.0-118-generic linux-image-4.15.0-120-generic linux-image-4.15.0-122-generic
+  linux-image-4.15.0-123-generic linux-image-4.15.0-126-generic linux-image-4.15.0-128-generic
+  linux-image-4.15.0-132-generic linux-image-4.15.0-133-generic linux-image-4.15.0-136-generic
+  linux-image-4.15.0-137-generic linux-image-4.15.0-139-generic linux-image-4.15.0-29-generic
+  linux-image-4.15.0-43-generic linux-image-4.15.0-45-generic linux-image-4.15.0-46-generic
+  linux-image-4.15.0-47-generic linux-image-4.15.0-50-generic linux-image-4.15.0-51-generic
+  linux-image-4.15.0-52-generic linux-image-4.15.0-54-generic linux-image-4.15.0-55-generic
+  linux-image-4.15.0-58-generic linux-image-4.15.0-60-generic linux-image-4.15.0-62-generic
+  linux-image-4.15.0-64-generic linux-image-4.15.0-65-generic linux-image-4.15.0-66-generic
+  linux-image-4.15.0-69-generic linux-image-4.15.0-70-generic linux-image-4.15.0-72-generic
+  linux-image-4.15.0-74-generic linux-image-4.15.0-76-generic linux-image-4.15.0-88-generic
+  linux-image-4.15.0-91-generic linux-image-4.15.0-96-generic linux-image-4.15.0-99-generic
+  linux-modules-4.15.0-101-generic linux-modules-4.15.0-106-generic
+  linux-modules-4.15.0-107-generic linux-modules-4.15.0-112-generic
+  linux-modules-4.15.0-115-generic linux-modules-4.15.0-117-generic
+  linux-modules-4.15.0-118-generic linux-modules-4.15.0-120-generic
+  linux-modules-4.15.0-122-generic linux-modules-4.15.0-123-generic
+  linux-modules-4.15.0-126-generic linux-modules-4.15.0-128-generic
+  linux-modules-4.15.0-132-generic linux-modules-4.15.0-133-generic
+  linux-modules-4.15.0-136-generic linux-modules-4.15.0-137-generic
+  linux-modules-4.15.0-139-generic linux-modules-4.15.0-29-generic
+  linux-modules-4.15.0-43-generic linux-modules-4.15.0-45-generic
+  linux-modules-4.15.0-46-generic linux-modules-4.15.0-47-generic
+  linux-modules-4.15.0-50-generic linux-modules-4.15.0-51-generic
+  linux-modules-4.15.0-52-generic linux-modules-4.15.0-54-generic
+  linux-modules-4.15.0-55-generic linux-modules-4.15.0-58-generic
+  linux-modules-4.15.0-60-generic linux-modules-4.15.0-62-generic
+  linux-modules-4.15.0-64-generic linux-modules-4.15.0-65-generic
+  linux-modules-4.15.0-66-generic linux-modules-4.15.0-69-generic
+  linux-modules-4.15.0-70-generic linux-modules-4.15.0-72-generic
+  linux-modules-4.15.0-74-generic linux-modules-4.15.0-76-generic
+  linux-modules-4.15.0-88-generic linux-modules-4.15.0-91-generic
+  linux-modules-4.15.0-96-generic linux-modules-4.15.0-99-generic
+  linux-modules-extra-4.15.0-101-generic linux-modules-extra-4.15.0-106-generic
+  linux-modules-extra-4.15.0-107-generic linux-modules-extra-4.15.0-112-generic
+  linux-modules-extra-4.15.0-115-generic linux-modules-extra-4.15.0-117-generic
+  linux-modules-extra-4.15.0-118-generic linux-modules-extra-4.15.0-120-generic
+  linux-modules-extra-4.15.0-122-generic linux-modules-extra-4.15.0-123-generic
+  linux-modules-extra-4.15.0-126-generic linux-modules-extra-4.15.0-128-generic
+  linux-modules-extra-4.15.0-132-generic linux-modules-extra-4.15.0-133-generic
+  linux-modules-extra-4.15.0-136-generic linux-modules-extra-4.15.0-137-generic
+  linux-modules-extra-4.15.0-139-generic linux-modules-extra-4.15.0-29-generic
+  linux-modules-extra-4.15.0-43-generic linux-modules-extra-4.15.0-45-generic
+  linux-modules-extra-4.15.0-46-generic linux-modules-extra-4.15.0-47-generic
+  linux-modules-extra-4.15.0-50-generic linux-modules-extra-4.15.0-51-generic
+  linux-modules-extra-4.15.0-52-generic linux-modules-extra-4.15.0-54-generic
+  linux-modules-extra-4.15.0-55-generic linux-modules-extra-4.15.0-58-generic
+  linux-modules-extra-4.15.0-60-generic linux-modules-extra-4.15.0-62-generic
+  linux-modules-extra-4.15.0-64-generic linux-modules-extra-4.15.0-65-generic
+  linux-modules-extra-4.15.0-66-generic linux-modules-extra-4.15.0-69-generic
+  linux-modules-extra-4.15.0-70-generic linux-modules-extra-4.15.0-72-generic
+  linux-modules-extra-4.15.0-74-generic linux-modules-extra-4.15.0-76-generic
+  linux-modules-extra-4.15.0-88-generic linux-modules-extra-4.15.0-91-generic
+  linux-modules-extra-4.15.0-96-generic linux-modules-extra-4.15.0-99-generic
+Use 'sudo apt autoremove' to remove them.
+下列【新】套件將會被安裝：
+  vsftpd
+升級 0 個，新安裝 1 個，移除 0 個，有 89 個未被升級。
+需要下載 115 kB 的套件檔。
+此操作完成之後，會多佔用 336 kB 的磁碟空間。
+下載:1 http://tw.archive.ubuntu.com/ubuntu xenial/main amd64 vsftpd amd64 3.0.3-3ubuntu2 [115 kB]
+取得 115 kB 用了 0s (247 kB/s)
+正在預先設定套件 ...
+選取了原先未選的套件 vsftpd。
+（讀取資料庫 ... 目前共安裝了 1817141 個檔案和目錄。）
+Preparing to unpack .../vsftpd_3.0.3-3ubuntu2_amd64.deb ...
+Unpacking vsftpd (3.0.3-3ubuntu2) ...
+Processing triggers for systemd (229-4ubuntu21.27) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for man-db (2.7.5-1) ...
+設定 vsftpd (3.0.3-3ubuntu2) ...
+Processing triggers for systemd (229-4ubuntu21.27) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+it@IT-Gitlab:~$
+it@IT-Gitlab:~$
+
+
+
+it@IT-Gitlab:~$ sudo nano /etc/vsftpd.conf
+
+比較注意的設定
+
+anonymous_enable=NO    -- Disabled by default
+write_enable=YES
+local_umask=022
+allow_writeable_chroot=YES
+/*加入以下資訊*/
+local_root=/var/www/html/static /*(這是登入的根目錄)*/
+pasv_enable=Yes
+pasv_min_port=40000
+pasv_max_port=40100
+
+
+修改後重啟
+sudo service vsftpd restart
+
+查看 FTP 狀態
+service vsftpd status
+
+
+
+接著建立一位不可登入系統的使用者來登入FTP
+sudo useradd -m john -s /usr/sbin/nologin
+
+然後設定密碼
+sudo passwd john
+
+然後編輯這個檔案/etc/shells
+sudo nano /etc/shells
+
+在最後一行加入
+/usr/sbin/nologin
+
+
+如果遇到檔案權限問題，請確認剛剛”local_root”中的路徑是不是可以正確寫入
+
